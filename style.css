@@ -1,0 +1,188 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #181818;
+    color: #f0f0f0;
+}
+
+/* Landing Page */
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    flex-direction: column;
+}
+
+.landing-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.landing-page button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.landing-page button:hover {
+    background-color: #c0392b;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #2c3e50;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar button {
+    background-color: #34495e;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.sidebar button:hover {
+    background-color: #2c3e50;
+}
+
+/* Dashboard Sections */
+#dashboard {
+    display: flex;
+}
+
+#tasks-section, #notes-section {
+    margin-left: 220px;
+    padding: 20px;
+    width: calc(100% - 220px);
+}
+
+button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+.task-card, .note-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .task-card, .dark-mode .note-card {
+    background-color: #333;
+    border-color: #444;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .modal-content {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Note Card Styles */
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.note-title {
+    font-size: 1.2rem;
+}
+
+.note-date {
+    color: #888;
+}
+
+.note-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .note-card {
+    background-color: #333;
+    border-color: #444;
+}

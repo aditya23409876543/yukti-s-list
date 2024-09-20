@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div class="landing-page">
+        <h1>Welcome to Your Space</h1>
+        <button onclick="enterDashboard()">Enter Dashboard</button>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" style="display: none;">
+        <div class="sidebar">
+            <button onclick="showTasksSection()">Tasks</button>
+            <button onclick="showNotesSection()">Notes</button>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
+
+        <div id="tasks-section">
+            <button onclick="addTask()">Add Task</button>
+            <button onclick="deleteAllTasks()">Delete All Tasks</button>
+            <div id="task-list"></div>
+        </div>
+
+        <div id="notes-section" style="display: none;">
+            <button onclick="addNote()">Add Note</button>
+            <div id="notes-list"></div>
+        </div>
+
+        <!-- Task Modal -->
+        <div id="task-modal" class="modal">
+            <div class="modal-content">
+                <span onclick="closeModal()" class="close">&times;</span>
+                <h2>Add Task</h2>
+                <input type="text" id="task-name" placeholder="Task Name">
+                <textarea id="task-details" placeholder="Task Details"></textarea>
+                <button onclick="saveTask()">Save Task</button>
+            </div>
+        </div>
+
+        <!-- Note Modal -->
+        <div id="note-modal" class="modal">
+            <div class="modal-content">
+                <span onclick="closeNoteModal()" class="close">&times;</span>
+                <h2>Add Note</h2>
+                <input type="text" id="note-title" placeholder="Note Title">
+                <input type="date" id="note-date">
+                <textarea id="note-content" placeholder="Note Content"></textarea>
+                <button onclick="saveNote()">Save Note</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
